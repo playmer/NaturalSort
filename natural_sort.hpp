@@ -195,8 +195,7 @@ namespace natural
 			flag_found_space2=false;
 			if(*current2==' ') flag_found_space2 = true;
 			
-
-			if( !isdigit(*current1 ) || !isdigit(*current2))
+			if( !isdigit(static_cast<unsigned char>(*current1)) || !isdigit(static_cast<unsigned char>(*current2)))
 			{
 				// Normal comparision if any of character is non digit character
 				if(detail::natural_less<ElementType>(*current1,*current2))
